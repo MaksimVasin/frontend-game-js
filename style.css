@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.page {
+  width: 100vw;
+  margin: 100px auto;
+}
+
+.game {
+  width: 100vw;
+  height: 50vh;
+  border: 1px solid #000;
+  position: relative;
+  background-color: rgb(54, 0, 105);
+
+  overflow: hidden;
+}
+
+.spider, .ninja {
+  width: 90px;
+  height: 90px;
+  background-image: url('img/spider.svg');
+  background-size: 90px 90px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transform: scale(-1, 1);
+}
+
+.ninja {
+  background-image: url('img/ninja.svg');
+  left: -70px;
+  animation: ninja 0.3s infinite linear;
+}
+
+@keyframes ninja {
+  0% {
+    background-image: url('img/ninja.svg');
+  }
+  50% {
+    background-image: url('img/ninja2.svg');
+  }
+}
+@keyframes ninja-dead {
+  0% {
+    background-image: url('img/ninja-dead2.svg');
+  }
+  50% {
+    background-image: url('img/ninja-dead3.svg');
+  }
+}
+
+@keyframes spider {
+  0% {
+    background-image: url('img/spider.svg');
+  }
+  50% {
+    background-image: url('img/spider2.svg');
+  }
+}
+
+@keyframes spider-shift {
+  0% {
+    background-image: url('img/spider-shift.svg');
+  }
+  25% {
+    background-image: url('img/spider-shift2.svg');
+  }
+  50% {
+    background-image: url('img/spider-shift3.svg');
+  }
+  75% {
+    background-image: url('img/spider-shift4.svg');
+  }
+  100% {
+    background-image: url('img/spider-shift5.svg');
+  }
+}
+
+.web {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.web-shoot {
+  position: absolute;
+  background-image: url('img/web.svg');
+  transform: scale(1, 1);
+  width: 70px;
+  height: 70px;
+  background-size: 70px 70px;
+  bottom: 18px;
+  left: -70px;
+  opacity: 0;
+}
